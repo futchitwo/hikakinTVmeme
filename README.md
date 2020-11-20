@@ -1,4 +1,4 @@
-# HIKAKIN TV 表示ライブラリ
+# HIKAKIN TV コピペ 表示ライブラリ
 Python library to output the HIKAKINTV appearance for each age and each year.  
 各年齢・各年のHIKAKIN TV の様子を出力するライブラリ。
 
