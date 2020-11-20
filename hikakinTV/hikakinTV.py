@@ -80,7 +80,7 @@ def hikakin_age(val):
         elif age < 10:
             print(hikakinTV[7].format(age))
         elif age < 16:
-            print(hikakinTV[12].format(agel))
+            print(hikakinTV[12].format(age))
         #17歳(2006年)youtubeが始まってからyoutubeが始まるまでのコピペは存在しない
         elif age < 29:
             print(hikakinTV[27].format(age,age+birth))
