@@ -68,73 +68,73 @@ def hikakin_age(val):
     if type(val) == int or type(val) == float:
         age = int(val)
         if 794-birth < age and age <1192-birth:
-            print(hikakinTV["平安"])
+            return hikakinTV["平安"]
         elif 1939-birth < age and age < 1945-birth:
-            print(hikakinTV["戦時中"])
+            return hikakinTV["戦時中"]
         elif age < 0:
-            print(hikakinTV[-1])
+            return hikakinTV[-1]
         elif age < 1:
-            print(hikakinTV[0].format(age))
+            return hikakinTV[0].format(age)
         elif age < 5:
-            print(hikakinTV[1].format(age))
+            return hikakinTV[1].format(age)
         elif age < 10:
-            print(hikakinTV[7].format(age))
+            return hikakinTV[7].format(age)
         elif age < 16:
-            print(hikakinTV[12].format(age))
+            return hikakinTV[12].format(age)
         #17歳(2006年)youtubeが始まってからyoutubeが始まるまでのコピペは存在しない
         elif age < 29:
-            print(hikakinTV[27].format(age,age+birth))
+            return hikakinTV[27].format(age,age+birth)
         elif age < 68:
-            print(hikakinTV[31].format(age))
+            return hikakinTV[31].format(age)
         elif age < 80:
-            print(hikakinTV[75].format(age))
+            return hikakinTV[75].format(age)
         elif age < 90:
-            print(hikakinTV[80].format(age))
+            return hikakinTV[80].format(age)
         elif age < 100:
-            print(hikakinTV[93].format(age))
+            return hikakinTV[93].format(age)
         elif age < 120:
-            print(hikakinTV[100].format(age))
+            return hikakinTV[100].format(age)
         elif age < 150:
-            print(hikakinTV[120].format(age))
+            return hikakinTV[120].format(age)
         elif age < 180:
-            print(hikakinTV[153].format(age))
+            return hikakinTV[153].format(age)
         elif age < 200:
-            print(hikakinTV[194].format(age))
+            return hikakinTV[194].format(age)
         elif age < 1000:
-            print(hikakinTV[240].format(age))
+            return hikakinTV[240].format(age)
         elif age < 100000000:
-            print(hikakinTV[12000].format(age))
+            return hikakinTV[12000].format(age)
         else:
             #さすがに死んでいる可能性がある
             if random.choice(["1200京","死んだ"]) == "死んだ":
-                print(hikakinTV["死んだ"])
+                return hikakinTV["死んだ"]
             else:
-                print(hikakinTV["1200京"].format(age,random.randint(3,31)))
+                return hikakinTV["1200京"].format(age,random.randint(3,31))
     else:
         if val in hikakinTV :
-            print(hikakinTV[val])
+            return hikakinTV[val]
         else:
-            random_all()
+            return random_all()
 
 
 def hikakin_year(val):
     if type(val) == int or type(val) == float:
-        hikakin_age(val-birth)
+        return hikakin_age(val-birth)
     else:
-        hikakin_age(val)
+        return hikakin_age(val)
 
 def random_unNum():
-    print(hikakinTV[random.choice(hikakinTV_unNum)])
+    return hikakinTV[random.choice(hikakinTV_unNum)]
 
 def random_all():
     randomHikakinTV = random.choice(list(hikakinTV.items()))[0]
 
     if randomHikakinTV == "1200京":
-        print(hikakinTV["1200京"].format(random.randint(100000000,120000000000000000),random.randint(3,31)))
+        return hikakinTV["1200京"].format(random.randint(100000000,120000000000000000),random.randint(3,31))
     elif type(randomHikakinTV) == int:
-        hikakin_age(randomHikakinTV)
+        return hikakin_age(randomHikakinTV)
     else :
-        print(hikakinTV[randomHikakinTV])
+        return hikakinTV[randomHikakinTV]
 
 if __name__=='__main__':
     argv = getArgv()
@@ -145,5 +145,5 @@ if __name__=='__main__':
     
     argv = valcalc(argv)
     #print("{}:{}".format(type(argv),argv))
-    hikakin_age(argv)
+    print(hikakin_age(argv))
 
