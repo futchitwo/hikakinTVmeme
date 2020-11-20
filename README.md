@@ -16,19 +16,27 @@ Twitterで検索したものの中から複数の HIKAKIN TV をピックアッ�
 
 - コマンドラインから起動  
 引数を与えると引数の年齢の HIKAKIN TV を表示します。
-引数がない場合は標準入力の年齢の HIKAKIN TV を表示します。</br></br>入力がキーワードの場合、キーワードに対応した HIKAKIN TV が表示されます。（「時代劇」→ 時代劇の HIKAKIN TV ）</br>キーワードに当てはまらない場合は全ての HIKAKIN TV の中からランダムに HIKAKIN TV を表示します。</br></br>なお、コマンドラインからしか出すことができない隠し HIKAKIN TV があります。
+引数がない場合は標準入力の年齢の HIKAKIN TV を表示します。</br></br>
+入力がキーワードの場合、キーワードに対応した HIKAKIN TV が表示されます。（「時代劇」→ 時代劇の HIKAKIN TV ）</br>キーワードに当てはまらない場合は全ての HIKAKIN TV の中からランダムに HIKAKIN TV を表示します。</br></br>
+なお、コマンドラインからしか出すことができない隠し HIKAKIN TV があります。
 
 - 外部から呼び出す  
-以下(関数の説明)の関数が使用できます。
+「関数の説明」にある関数が使用できます。</br>
+使用時はhikakinTVフォルダごと作業ディレクトリに保存し、プログラム中に下記のコードを入力してください。
+```python
+from hikakinTV import hikakinTV
+```
+
+
 ## 関数の説明
 `hikakin_age`  
-入力された年齢に対応する HIKAKIN TV を返します。
-入力がキーワードの場合、キーワードに対応した HIKAKIN TV を返します。（「時代劇」→ 時代劇の HIKAKIN TV ）
+入力された年齢に対応する HIKAKIN TV を返します。  
+入力がキーワードの場合、キーワードに対応した HIKAKIN TV を返します。（「時代劇」→ 時代劇の HIKAKIN TV ）  
 キーワードに当てはまらない場合は全ての HIKAKIN TV の中からランダムに HIKAKIN TV を返します。
 
 `hikakin_year`  
-入力された西暦に対応する HIKAKIN TV を返します。
-入力がキーワードの場合、キーワードに対応した HIKAKIN TV を返します。（「時代劇」→ 時代劇の HIKAKIN TV ）
+入力された西暦に対応する HIKAKIN TV を返します。  
+入力がキーワードの場合、キーワードに対応した HIKAKIN TV を返します。（「時代劇」→ 時代劇の HIKAKIN TV ）  
 キーワードに当てはまらない場合は全ての HIKAKIN TV の中からランダムに HIKAKIN TV を返します。
 
 `random_all`  
